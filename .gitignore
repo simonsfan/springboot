@@ -1,0 +1,73 @@
+*.class
+
+#package file
+*.war
+*.ear
+
+#kdiff3 ignore
+*.orig
+
+#maven ignore
+target/
+
+#eclipse ignore
+.settings/
+.project
+.classpath
+
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+#temp file
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+
+
+或者对比参考
+
+#java
+*.class
+.springBeans
+.project
+.classpath
+
+# generated files
+*/**/target/
+**/target/
+dist/
+bin/
+gen/
+build/
+temp/
+tmp/
+test-output
+.externalToolBuilders
+.metadata
+.settings/
+META-INF/
+.idea/
+## generic files to ignore
+.svn/
+*~
+*.tmp
+*.bak
+*.swp
+*.log
+*.lock
+*.DS_Store
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
