@@ -9,7 +9,7 @@ public class SampleKey extends BasePrefix {
         super(prefix);
     }
 
-    public static SampleKey SAMPLEKEY = new SampleKey("samplekey");
+    public static SampleKey SAMPLEKEY = new SampleKey("sample");
 
 
 }

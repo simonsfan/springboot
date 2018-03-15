@@ -15,7 +15,7 @@ import java.util.List;
 @Mapper
 public interface SampleDao {
 
-    @Select("select act_id from activity_info")
+    @Select("select  product_id  from  mmall_cart")
     List<String> getActivityId();
 
 
