@@ -19,5 +19,4 @@ public class AopController {
         return "hello world!";
     }
 
-
 }

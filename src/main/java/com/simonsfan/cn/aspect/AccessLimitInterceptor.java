@@ -2,19 +2,15 @@ package com.simonsfan.cn.aspect;
 
 import com.simonsfan.cn.redis.AccessKey;
 import com.simonsfan.cn.redis.RedisService;
-import com.simonsfan.cn.redis.SampleKey;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.retry.ExhaustedRetryException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.lang.reflect.Method;
 
 /**
  * Created by fanrx on 2018/3/11.

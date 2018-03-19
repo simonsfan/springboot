@@ -2,9 +2,6 @@ package com.simonsfan.cn.aspect;
 
 import java.lang.annotation.*;
 
-/**
- * Created by fanrx on 2018/3/11.
- */
 @Inherited
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
