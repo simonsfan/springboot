@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
  * Created by fanrx on 2018/3/18.
  */
 @Component
-public class BeanObtainUtils implements BeanFactoryAware {
+public class GetBeanInstanceUtil implements BeanFactoryAware {
 
     private static BeanFactory beanFactory;
 
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        BeanObtainUtils.beanFactory=beanFactory;
+        GetBeanInstanceUtil.beanFactory=beanFactory;
     }
 
     public static BeanFactory getBeanFactory(){

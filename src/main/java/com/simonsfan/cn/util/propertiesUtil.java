@@ -13,9 +13,9 @@ import java.util.ResourceBundle;
  *
  * Created by simonsfan
  */
-public class ResourceUtils {
+public class PropertiesUtil {
 
-    private static final Logger log = LoggerFactory.getLogger(ResourceUtils.class);
+    private static final Logger log = LoggerFactory.getLogger(PropertiesUtil.class);
 
     private static final String RESOUCE_CONFIG = "common.properties";
 
@@ -31,15 +31,15 @@ public class ResourceUtils {
     private static void initLoad() {
         properties = new Properties();
         // 方式一获取流
-        InputStream inputStream1 = ResourceUtils.class.getResourceAsStream(RESOUCE_CONFIG);
+        InputStream inputStream1 = PropertiesUtil.class.getResourceAsStream(RESOUCE_CONFIG);
         // 方式二获取流
-        InputStream inputStream2 = ResourceUtils.class.getClassLoader().getResourceAsStream(RESOUCE_CONFIG);
+        InputStream inputStream2 = PropertiesUtil.class.getClassLoader().getResourceAsStream(RESOUCE_CONFIG);
         // 方式三（此方式优先考虑）
         InputStream inputStream3 = Thread.currentThread().getContextClassLoader().getResourceAsStream(RESOUCE_CONFIG);
         try {
             properties.load(inputStream3);
         } catch (Exception e) {
-            log.error("ResourceUtils read resouce file exception:{}", e);
+            log.error("PropertiesUtil read resouce file exception:{}", e);
         } finally {
             if (inputStream3 != null) {
                 IOUtils.closeQuietly(inputStream3);

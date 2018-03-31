@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>Getting Started: Serving Web Content</title>
+</head>
+<body>
+<h1>Hello World!</h1>
+<p th:text="${name}"/>
+springmvc上传文件
+<form name="form1" action="/file/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="upload_file" />
+    <input type="submit" value="springmvc上传文件" />
+</form>
+
+</body>
+</html>

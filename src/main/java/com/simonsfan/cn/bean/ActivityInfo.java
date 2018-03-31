@@ -1,4 +1,4 @@
-package com.simonsfan.cn.main;
+package com.simonsfan.cn.bean;
 
 /**
  * Created by fanrx on 2018/3/18.
@@ -22,7 +22,6 @@ public class ActivityInfo{
     public void setMd5Key(String md5Key) {
         this.md5Key = md5Key;
     }
-
     @Override
     public String toString() {
         return "ActivityInfo{" +
