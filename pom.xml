@@ -40,7 +40,7 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
-        <!--jedis-->
+        <!--jedis 2.9.0-->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
