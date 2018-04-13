@@ -2,7 +2,6 @@ package com.simonsfan.cn.controller;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * <p>
@@ -11,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by fanrx on 2018/3/11.
  */
 @Controller
-@RequestMapping("/init")
-public class InitialzationController implements InitializingBean {
+//@RequestMapping("/init")
+public class InitialOperation implements InitializingBean {
 
     public void afterPropertiesSet() {
         System.out.println("this is the initial content……");
