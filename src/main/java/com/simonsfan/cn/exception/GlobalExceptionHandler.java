@@ -22,6 +22,8 @@ public class GlobalExceptionHandler {
             System.out.println(("Global exception handler exception="+global.getMessage()));
             return "error";
         }
+
+        
         return null;
     }
 
