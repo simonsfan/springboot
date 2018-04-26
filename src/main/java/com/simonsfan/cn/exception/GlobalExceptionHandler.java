@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by fanrx on 2018/4/24.
@@ -15,16 +16,17 @@ public class GlobalExceptionHandler {
     private static final Logger log = LoggerFactory.getLogger(GlobalException.class);
 
     @ExceptionHandler(GlobalException.class)
-    public String handleException(HttpServletRequest request, Exception ex) {
-        if (ex instanceof IndexOutOfBoundsException) {
-            GlobalException global = new GlobalException("我是全局异常处理器");
-            log.info("Global exception handler exception="+global.getMessage());
-            System.out.println(("Global exception handler exception="+global.getMessage()));
-            return "error";
+    public ModelAndView handleException(HttpServletRequest request, Exception ex) {
+        String msg = "";
+        if (ex instanceof GlobalException || ex instanceof IndexOutOfBoundsException) {
+           msg=((GlobalException) ex).getMsg();
+        }else{
+            msg = "未知异常";
         }
-
-        
-        return null;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("msg",msg);
+        modelAndView.setViewName("error");
+        return modelAndView;
     }
 
 }
