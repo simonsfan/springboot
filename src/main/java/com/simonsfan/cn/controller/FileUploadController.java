@@ -1,7 +1,7 @@
 package com.simonsfan.cn.controller;
 
 import com.simonsfan.cn.util.FTPUtil;
-import com.simonsfan.cn.util.PropertiesUtil;
+import com.simonsfan.cn.util.PropertyUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,7 +31,7 @@ public class FileUploadController {
     public String upload(HttpSession session, @RequestParam(value = "upload_file", required = false) MultipartFile file, HttpServletRequest request) {
         String path = request.getSession().getServletContext().getRealPath("upload"); //  "/develop/apache-tomcat-7.0.82/webapps/ROOT/upload"
         String targetFileName = FTPUtil.upload(file, path);
-        String url = PropertiesUtil.getByKey("ftp.server.http.prefix","") + targetFileName;
+        String url = PropertyUtils.getByKey("ftp.server.http.prefix","") + targetFileName;
         return url;
     }
 }

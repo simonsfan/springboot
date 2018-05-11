@@ -44,9 +44,9 @@ public class FTPUtil {
         return targetFile.getName();    // 返回上传到服务器后的文件名
     }
 
-    private static String ftpIp = PropertiesUtil.getByKey("ftp.server.ip","192.168.0.128");
-    private static String ftpUser = PropertiesUtil.getByKey("ftp.user","ftpuser");;
-    private static String ftpPass = PropertiesUtil.getByKey("ftp.pass","123456");;
+    private static String ftpIp = PropertyUtils.getByKey("ftp.server.ip","192.168.0.128");
+    private static String ftpUser = PropertyUtils.getByKey("ftp.user","ftpuser");;
+    private static String ftpPass = PropertyUtils.getByKey("ftp.pass","123456");;
 
     public FTPUtil(String ip, int port, String user, String pwd){
         this.ip = ip;
