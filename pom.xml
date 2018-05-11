@@ -185,6 +185,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>springboot</finalName>
     </build>
 
 </project>
