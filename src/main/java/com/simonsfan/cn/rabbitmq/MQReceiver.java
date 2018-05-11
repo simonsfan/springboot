@@ -1,14 +1,9 @@
 package com.simonsfan.cn.rabbitmq;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Component;
-
 /**
  * Created by fanrx on 2018/3/6.
  */
-@Component
+/*@Component
 public class MQReceiver {
 
     private static Logger log = LoggerFactory.getLogger(MQReceiver.class);
@@ -33,4 +28,4 @@ public class MQReceiver {
         log.info(" header  queue message:" + new String(message));
     }
 
-}
+}*/

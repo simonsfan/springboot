@@ -1,4 +1,5 @@
 package com.simonsfan.cn.controller;
+/*
 
 import com.simonsfan.cn.rabbitmq.MQSender;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,3 +44,4 @@ public class RabbitMqController {
 
 
 }
+*/
