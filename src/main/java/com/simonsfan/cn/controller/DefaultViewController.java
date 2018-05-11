@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * Created by fanrx on 2018/5/11.
  */
 @Configuration
-public class DefaultView extends WebMvcConfigurerAdapter {
+public class DefaultViewController extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
